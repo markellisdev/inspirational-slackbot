@@ -19,4 +19,14 @@ bot.on('start', () => {
         'Get inspired while working with @inspirationalquotes',
         params
     );
+    // post message to individual user
+    bot.postMessageToUser(
+        'ellisfirst',
+        'This is a message from your friendly inspirational bot. Be well!',
+        params
+    );
+})
+
+bot.on('error', (err) => {
+    console.log(err);
 })
