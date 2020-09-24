@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config()
 
+// Create a new Slackbot instance
 const bot = new Slackbot({
     token: `${process.env.BOT_TOKEN}`,
     name: 'inspire-bot'
