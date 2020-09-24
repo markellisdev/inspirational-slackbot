@@ -40,6 +40,7 @@ bot.on('message', (data) => {
     handleMessage(data.text);
 })
 
+// Response Handler
 let handleMessage = message => {
     if(message.includes('inspire me')) {
         inspireMe()
@@ -47,13 +48,6 @@ let handleMessage = message => {
         runHelp()
     }
 }
-// function handleMessage(message) {
-//     if(message.includes('inspire me')) {
-//         inspireMe()
-//     } else if(message.includes(' help')) {
-//         runHelp()
-//     }
-// }
 
 
 let inspireMe = () => {
@@ -76,27 +70,6 @@ let inspireMe = () => {
         })
         
 }
-
-// function inspireMe() {
-//     axios.get('https://raw.githubusercontent.com/BolajiAyodeji/inspireNuggets/master/src/quotes.json')
-//       .then(res => {
-//             const quotes = res.data;
-//             const random = Math.floor(Math.random() * quotes.length);
-//             const quote = quotes[random].quote
-//             const author = quotes[random].author
-
-//             const params = {
-//                 icon_emoji: ':male-technologist:'
-//             }
-        
-//             bot.postMessageToChannel(
-//                 'random',
-//                 `:zap: ${quote} - *${author}*`,
-//                 params
-//             );
-
-//       })
-// }
 
 function runHelp() {
     const params = {
